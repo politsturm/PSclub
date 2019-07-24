@@ -1,0 +1,30 @@
+.wrapper {
+	max-width: 1169px;
+	margin: 30px auto 70px auto;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 129px;
+}
+
+.menu ul {
+	margin: 0;
+}
+
+.menu li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 35px;
+}
+
+.menu li a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
+}

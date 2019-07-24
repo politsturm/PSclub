@@ -1,0 +1,15 @@
+.wrapper {
+	max-width: 1169px;
+	margin: 30px auto;
+	padding: 10px 20px;
+	display: flex;
+}
+
+.sectionText {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 21px;
+	line-height: 1.9;
+	letter-spacing: 0.53px;
+	color: #000000;
+	margin-bottom: 1.45rem;
+}
