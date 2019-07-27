@@ -3,6 +3,7 @@
 	margin: 30px auto;
 	padding: 10px 20px;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .sectionText {
