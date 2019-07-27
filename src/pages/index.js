@@ -7,6 +7,9 @@ import SEO from "../components/seo"
 import IntroSection from "../components/IntroSection"
 import StepSection from "../components/StepSection"
 import ProgrammSection from "../components/ProgrammSection"
+import MapSection from "../components/MapSection"
+import JoinSection from "../components/JoinSection"
+import ContactSection from "../components/ContactSection"
 
 const IndexPage = () => {
 	const data = useStaticQuery(graphql`
@@ -67,7 +70,10 @@ const IndexPage = () => {
 				<Img style={{transform: "rotate(15deg)"}} fixed={data.flagImage.childImageSharp.fixed} />
 			</StepSection>
 
-      <ProgrammSection />
+			<ProgrammSection />
+			<MapSection />
+			<JoinSection />
+			<ContactSection />
 			{/*<Link to="/page-2/">Go to page 2</Link>*/}
 		</Layout>
 	)
