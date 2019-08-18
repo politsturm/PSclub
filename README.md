@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/politsturm/PSclub.svg?branch=master)](https://travis-ci.org/politsturm/PSclub)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
