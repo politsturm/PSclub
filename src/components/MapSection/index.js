@@ -1,9 +1,11 @@
 import React from "react"
 import GoogleMapReact from 'google-map-react';
 import classNames from "classnames"
+import styles from "./styles.module.css"
 import styleHelpers from "../helpers.module.css"
 
 const {wrapper} = styleHelpers;
+const {mapStyles} = styles;
 
 const ProgrammSection = ({center, zoom}) => {
 	const sectionClasses = classNames({
@@ -11,9 +13,9 @@ const ProgrammSection = ({center, zoom}) => {
 	})
 
 	return (
-		<div className={sectionClasses} style={{marginTop: "250px"}}>
+		<div className={sectionClasses}>
 			<h2>Карта</h2>
-			<div style={{ height: '621px', width: '100%', borderRadius: '20px', marginTop: "80px"}}>
+			<div className={mapStyles}>
 				<GoogleMapReact
 					bootstrapURLKeys={{ key: "AIzaSyBBXqiXM0Uz6IMSDBSHKhTvojkJN09NX0g" }}
 					defaultCenter={center}

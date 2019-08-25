@@ -1,5 +1,6 @@
 .itemsWrapper {
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-between;
 	margin-top: 60px;
@@ -50,4 +51,38 @@
 .itemText {
 	font-size: 13px;
 	margin-top: 50px;
+}
+
+@media screen and (max-width:950px) {
+	.itemsWrapper {
+		margin-top: 30px;
+	}
+
+	.itemHeading {
+		font-size: 25px;
+	}
+
+	.itemHeading:before {
+		margin-top: -4px;
+		margin-left: -17px;
+	}
+
+	.itemHeading:after {
+		margin-top: 40px;
+		right: 180px;
+		transform: rotate(90deg);
+		width: 66%;
+	}
+
+	.programmItem {
+		padding-left: 20px;
+	}
+
+	.itemText {
+		margin-top: 10px;
+	}
+
+	.itemsWrapper:before {
+		display: none;
+	}
 }

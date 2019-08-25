@@ -5,7 +5,7 @@
 }
 
 .textWrapper {
-	width: calc(35px + 40px + 535px);
+	max-width: calc(35px + 40px + 535px);
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
@@ -15,4 +15,28 @@
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
 	margin-right: 40px;
+}
+
+.left {
+	order: 0;
+}
+
+.right {
+	order: 1;
+}
+
+@media screen and (max-width:950px) {
+	.left, .right {
+		order: 0;
+	}
+
+	.sectionWrapper {
+		margin-bottom: 120px;
+	}
+
+	.sectionWrapper > div:nth-child(2) {
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 20px;
+	}
 }

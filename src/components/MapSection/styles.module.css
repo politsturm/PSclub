@@ -1,0 +1,13 @@
+.mapStyles {
+	height: 621px;
+	width: 100%;
+	border-radius: 20px;
+	margin-top: 80px;
+}
+
+@media screen and (max-width:950px) {
+	.mapStyles {
+		margin-top: 30px;
+		height: 521px;
+	}
+}

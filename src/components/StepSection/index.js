@@ -6,7 +6,7 @@ import styles from "./styles.module.css"
 import styleHelpers from "../helpers.module.css"
 
 const {wrapper, sectionText} = styleHelpers;
-const {sectionWrapper, textWrapper, stepNumberStyle} = styles;
+const {sectionWrapper, textWrapper, stepNumberStyle, left, right} = styles;
 
 const StepSection = ({children, title, stepNumber, description, direction}) => {
 	const sectionClasses = classNames({
@@ -14,9 +14,15 @@ const StepSection = ({children, title, stepNumber, description, direction}) => {
 		[sectionWrapper]: true
 	})
 
+	const directionClasses = classNames({
+		[left]: direction === 'left',
+		[right]: direction === 'right',
+		[textWrapper]: true
+	})
+
 	return (
 		<div className={sectionClasses} >
-			<div className={textWrapper} style={{order: direction === "left" ? "0" : "1"}}>
+			<div className={directionClasses}>
 				<div className={stepNumberStyle}>{stepNumber}</div>
 				<div>
 					<h2>{title}</h2>
@@ -26,12 +32,6 @@ const StepSection = ({children, title, stepNumber, description, direction}) => {
 			{children}
 		</div>
 	)
-}
-
-StepSection.propTypes = {
-}
-
-StepSection.defaultProps = {
 }
 
 export default StepSection

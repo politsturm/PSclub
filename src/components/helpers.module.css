@@ -4,6 +4,8 @@
 	padding: 10px 20px;
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 200px;
+	margin-top: 250px;
 }
 
 .sectionText {
@@ -13,4 +15,15 @@
 	letter-spacing: 0.53px;
 	color: #000000;
 	margin-bottom: 1.45rem;
+}
+
+@media screen and (max-width:950px) {
+	.sectionText {
+		font-size: 16px;
+	}
+
+	.wrapper {
+		margin-bottom: 100px;
+		margin-top: 30px;
+	}
 }

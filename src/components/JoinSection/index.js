@@ -3,8 +3,10 @@ import classNames from "classnames"
 import Button from "../Button"
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
+import styles from "./styles.module.css"
 import styleHelpers from "../helpers.module.css"
 
+const {formStyles} = styles;
 const {wrapper} = styleHelpers;
 
 const JoinSection = ({center, zoom}) => {
@@ -13,10 +15,10 @@ const JoinSection = ({center, zoom}) => {
 	})
 
 	return (
-		<div className={sectionClasses} style={{marginTop: "250px"}}>
+		<div className={sectionClasses}>
 			<h2>Вступить</h2>
 			<div style={{width: '100%'}}>
-				<form style={{maxWidth: "770px", margin: "80px auto 0 auto"}}>
+				<form className={formStyles}>
 					<TextField
 						label="Введите ваше имя"
 						margin="normal"

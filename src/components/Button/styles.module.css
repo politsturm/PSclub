@@ -11,6 +11,13 @@
 	background-image: linear-gradient(to left, #ff0030, #860019), linear-gradient(to bottom, #ff0030, #ff0030);
 }
 
+@media screen and (max-width:950px) {
+	.button {
+		font-size: 16px;
+		padding: 15px 60px;
+	}
+}
+
 .button:focus {
 	outline: none;
 }

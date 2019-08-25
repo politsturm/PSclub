@@ -6,10 +6,11 @@ import styles from "./styles.module.css"
 import styleHelpers from "../helpers.module.css"
 
 const {wrapper, sectionText} = styleHelpers;
+const {introWrapper} = styles;
 
 const IntroSection = () => (
-  <div className={wrapper} style={{marginBottom: "200px"}}>
-    <div style={{width: "535px"}}>
+  <div className={wrapper}>
+    <div className={introWrapper}>
       <h1>Что такое марксистский клуб?</h1>
       <div className={sectionText}>«Политштурм» – независимый коммунистический информационный ресурс, освещающий события с точки зрения марксизма-ленинизма.</div>
       <Button style={{marginTop: "30px"}}>Вступить</Button>

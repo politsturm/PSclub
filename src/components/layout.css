@@ -610,6 +610,17 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+@media screen and (max-width:950px) {
+  h1 {
+    font-size: 39.5px;
+  }
+
+  h2 {
+    font-size: 26.5px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
