@@ -1,4 +1,5 @@
-import React from "react"
+import React, {Component} from "react"
+import axios from "axios"
 import classNames from "classnames"
 import Button from "../Button"
 import { withStyles } from '@material-ui/core/styles'
@@ -9,47 +10,99 @@ import styleHelpers from "../helpers.module.css"
 const {formStyles} = styles;
 const {wrapper} = styleHelpers;
 
-const JoinSection = ({center, zoom}) => {
-	const sectionClasses = classNames({
-		[wrapper]: true
-	})
+class JoinSection extends Component {
+	constructor(props) {
+		super(props);
 
-	return (
-		<div className={sectionClasses}>
-			<h2>Вступить</h2>
-			<div style={{width: '100%'}}>
-				<form className={formStyles}>
-					<TextField
-						label="Введите ваше имя"
-						margin="normal"
-						name="name"
-						fullWidth
-						style={{marginBottom: "50px"}}
-					/>
+		this.state = {
+			name: '',
+			email: '',
+			reason: ''
+		};
 
-					<TextField
-						label="Введите ваш E-mail адрес"
-						type="email"
-         				name="email"
-						margin="normal"
-						fullWidth
-						style={{marginBottom: "50px"}}
-					/>
+		this.onChange = this.onChange.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
+	}
 
-					<TextField
-						label="Почему вы хотите вступить в МК?"
-						margin="normal"
-						multiline
-						fullWidth
-					/>
+	onChange(event) {
+		const {name, value} = event.target;
 
-					<div style={{textAlign: "right"}}>
-						<Button style={{marginTop: "70px"}}>Вступить</Button>
-					</div>
-				</form>
+		this.setState({[name]: value});
+	}
+
+	onSubmit(event) {
+		event.preventDefault();
+
+		const {name, reason, email} = this.state;
+
+		console.log('name >', name, 'reason >', reason, 'email >', email);
+
+		axios.get('http://politsturm.com/mail/', {
+				firstName: 'Fred',
+				lastName: 'Flintstone'
+			})
+			.then(function (response) {
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+	}
+
+	render() {
+		const sectionClasses = classNames({
+			[wrapper]: true
+		})
+
+		const {name, email, reason} = this.state;
+
+		return (
+			<div className={sectionClasses}>
+				<h2>Вступить</h2>
+				<div style={{width: '100%'}}>
+					<form className={formStyles} onSubmit={this.onSubmit}>
+						<TextField
+							label="Введите ваше имя"
+							margin="normal"
+							name="name"
+							fullWidth
+							required
+							style={{marginBottom: "50px"}}
+							value={name}
+							onChange={this.onChange}
+						/>
+
+						<TextField
+							label="Введите ваш E-mail адрес"
+							type="email"
+	         				name="email"
+							margin="normal"
+							fullWidth
+							required
+							style={{marginBottom: "50px"}}
+							value={email}
+							onChange={this.onChange}
+						/>
+
+						<TextField
+							label="Почему вы хотите вступить в МК?"
+							required
+							margin="normal"
+							name="reason"
+							multiline
+							fullWidth
+							value={reason}
+							onChange={this.onChange}
+						/>
+
+						<div style={{textAlign: "right"}}>
+							<Button style={{marginTop: "70px"}}>Вступить</Button>
+						</div>
+					</form>
+				</div>
 			</div>
-		</div>
-	)
+		)
+	}
 }
 
 export default JoinSection
