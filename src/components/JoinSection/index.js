@@ -34,12 +34,10 @@ class JoinSection extends Component {
 		event.preventDefault();
 
 		const {name, reason, email} = this.state;
+		const bodyFormData = new FormData(event.target);
 
-		console.log('name >', name, 'reason >', reason, 'email >', email);
-
-		axios.get('https://politsturm.com/mail/', {
-				firstName: 'Fred',
-				lastName: 'Flintstone'
+		axios.post('https://politsturm.com/mail/index.php', bodyFormData, {
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 			})
 			.then(function (response) {
 				console.log(response);
