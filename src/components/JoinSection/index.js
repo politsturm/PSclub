@@ -37,7 +37,7 @@ class JoinSection extends Component {
 
 		console.log('name >', name, 'reason >', reason, 'email >', email);
 
-		axios.get('http://politsturm.com/mail/', {
+		axios.get('https://politsturm.com/mail/', {
 				firstName: 'Fred',
 				lastName: 'Flintstone'
 			})
