@@ -4,10 +4,15 @@ import classNames from "classnames"
 import Button from "../Button"
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import styles from "./styles.module.css"
 import styleHelpers from "../helpers.module.css"
 
-const {formStyles} = styles;
+const {
+	formStyles,
+	confirmedMessage,
+	errorMessage
+} = styles;
 const {wrapper} = styleHelpers;
 
 class JoinSection extends Component {
@@ -17,7 +22,10 @@ class JoinSection extends Component {
 		this.state = {
 			name: '',
 			email: '',
-			reason: ''
+			reason: '',
+			sent: false,
+			loading: false,
+			error: false
 		};
 
 		this.onChange = this.onChange.bind(this);
@@ -36,14 +44,16 @@ class JoinSection extends Component {
 		const {name, reason, email} = this.state;
 		const bodyFormData = new FormData(event.target);
 
+		this.setState({loading: true, error: false});
+
 		axios.post('https://politsturm.com/mail/index.php', bodyFormData, {
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 			})
-			.then(function (response) {
-				console.log(response);
+			.then((response) => {
+				this.setState({sent: true, loading: false});
 			})
-			.catch(function (error) {
-				console.log(error);
+			.catch((error) => {
+				this.setState({error: true, loading: false});
 			});
 	}
 
@@ -52,7 +62,14 @@ class JoinSection extends Component {
 			[wrapper]: true
 		})
 
-		const {name, email, reason} = this.state;
+		const {
+			name,
+			email,
+			reason,
+			sent,
+			loading,
+			error
+		} = this.state;
 
 		return (
 			<div className={sectionClasses}>
@@ -94,7 +111,12 @@ class JoinSection extends Component {
 						/>
 
 						<div style={{textAlign: "right"}}>
-							<Button style={{marginTop: "70px"}}>Вступить</Button>
+							{loading && (<span style={{marginTop: "40px"}}><CircularProgress color="secondary" /></span>)}
+							{!sent && !loading ? (<Button style={{marginTop: "70px"}}>
+								Вступить
+							</Button>) : null}
+							{sent && ((<div className={confirmedMessage}>Заявка отправлена</div>))}
+							{error && ((<div className={errorMessage}>Что-то пошло не так</div>))}
 						</div>
 					</form>
 				</div>

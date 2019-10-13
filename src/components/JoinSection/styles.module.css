@@ -3,6 +3,17 @@
 	margin: 80px auto 0 auto;
 }
 
+.confirmedMessage, .errorMessage {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.errorMessage {
+	color: red;
+}
+
 @media screen and (max-width:950px) {
 	.formStyles {
 		margin-top: 20px;
