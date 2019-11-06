@@ -159,6 +159,9 @@ legend {
 textarea {
   overflow: auto;
 }
+.ymaps-2-1-74-ground-pane {
+  filter: grayscale(1);
+}
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
