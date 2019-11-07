@@ -59,8 +59,8 @@
 
 @media screen and (max-width:1920px) {
 	.headerImage:before {
-		width: 1300px;
-		height: 1300px;
+		width: 1350px;
+		height: 1350px;
 		top: -700px;
 		left: 50%;
 	}
