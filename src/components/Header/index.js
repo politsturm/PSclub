@@ -40,7 +40,7 @@ const Header = ({ siteTitle }) => (
             <a href="https://politsturm.com/programma-raboty/">Программа</a>
           </li>
           <li>
-            <Link to="/course/">Курс обучения</Link>
+            {/*<Link to="/course/">Курс обучения</Link>*/}
           </li>
           <li>
             <a href="https://politsturm.com/">Politsturm</a>
