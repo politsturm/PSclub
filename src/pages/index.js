@@ -67,7 +67,7 @@ const IndexPage = () => {
 				description="МК на практике применяют марксизм-ленинизм к текущим условиям и ведут современную коммунистическую работу, учитывая реалии XXI века. Подготовленные в МК коммунисты станут опорой для формирования будущих коммунистических партий."
 				direction="left"
 			>
-				<Img style={{transform: "rotate(15deg)"}} fixed={data.flagImage.childImageSharp.fixed} />
+				<Img style={{transform: "rotate(-15deg)"}} fixed={data.flagImage.childImageSharp.fixed} />
 			</StepSection>
 
 			<ProgrammSection />
