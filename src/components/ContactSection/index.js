@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import classNames from "classnames"
 import styleHelpers from "../helpers.module.css"
@@ -20,19 +21,19 @@ const ContactSection = ({center, zoom}) => {
 			<div style={{width: "100%"}}>
 				<div className={footerWrapper}>
 					<ul>
-						<li className={menuItem}><a href="#">О нас</a></li>
-						<li className={menuItem}><a href="#">Курс обучения</a></li>
+						<li className={menuItem}><Link to="/about/">О нас</Link></li>
+						<li className={menuItem}><Link to="/course/">Курс обучения</Link></li>
 						<li className={menuItem}><a href="#">Литература</a></li>
 					</ul>
 					<ul>
 						<li className={menuItem}><a href="#">FAQ</a></li>
-						<li className={menuItem}><a href="#">Карта клубов</a></li>
-						<li className={menuItem}><a href="#">Politsturm.com</a></li>
+						<li className={menuItem}><a href="/#map">Карта клубов</a></li>
+						<li className={menuItem}><a href="https://politsturm.com/">Politsturm</a></li>
 					</ul>
 					<ul>
-						<li className={menuItem}><a href="#">VK</a></li>
-						<li className={menuItem}><a href="#">Telegram</a></li>
-						<li className={menuItem}><a href="#">Email</a></li>
+						<li className={menuItem}><a href="https://vk.com/politsturm">VK</a></li>
+						<li className={menuItem}><a href="https://t.me/politsturm">Telegram</a></li>
+						<li className={menuItem}><a href="mailto:politsturm@gmail.com">Email</a></li>
 					</ul>
 				</div>
 			</div>
