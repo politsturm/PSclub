@@ -33,9 +33,9 @@ const Header = ({ siteTitle }) => (
       </div>
       <div className={menu}>
         <ul>
-          <li>
+          {/*<li>
             <Link to="/faq/">FAQ</Link>
-          </li>
+          </li>*/}
           <li>
             <a href="https://politsturm.com/programma-raboty/">Программа</a>
           </li>
