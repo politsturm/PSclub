@@ -34,16 +34,16 @@ const Header = ({ siteTitle }) => (
       <div className={menu}>
         <ul>
           <li>
-            <Link to="/page-2/">FAQ</Link>
+            <Link to="/faq/">FAQ</Link>
           </li>
           <li>
-            <a href="#">Программа</a>
+            <a href="https://politsturm.com/programma-raboty/">Программа</a>
           </li>
           <li>
-            <a href="#">Курс обучения</a>
+            <Link to="/course/">Курс обучения</Link>
           </li>
           <li>
-            <a href="#">Politsturm</a>
+            <a href="https://politsturm.com/">Politsturm</a>
           </li>
           <li>
             <a href="#join">Вступить</a>
