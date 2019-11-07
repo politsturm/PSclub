@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => (
             <a href="https://politsturm.com/">Politsturm</a>
           </li>
           <li>
-            <a href="#join">Вступить</a>
+            <Link to="/#join">Вступить</Link>
           </li>
         </ul>
       </div>
