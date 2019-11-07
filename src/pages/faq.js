@@ -7,7 +7,7 @@ import ContentSection from "../components/ContentSection"
 import ContactSection from "../components/ContactSection"
 import Title from "../components/Title"
 
-const SecondPage = () => (
+const FAQPage = () => (
   <Layout>
     <SEO title="FAQ" />
     <Title>FAQ</Title>
@@ -43,4 +43,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FAQPage
