@@ -39,9 +39,9 @@ const Header = ({ siteTitle }) => (
           <li>
             <a href="https://politsturm.com/programma-raboty/">Программа</a>
           </li>
-          <li>
-            {/*<Link to="/course/">Курс обучения</Link>*/}
-          </li>
+          {/*<li>
+            <Link to="/course/">Курс обучения</Link>
+          </li>*/}
           <li>
             <a href="https://politsturm.com/">Politsturm</a>
           </li>
