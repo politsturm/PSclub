@@ -23,9 +23,10 @@
 .headerImage:before {
 	content: "";
 	position: absolute;
-	background-image: url(../../images/header.png);
+	background-image: url(../../images/header2.png);
+	background-position: 95% 95%;
 	background-color: #FF272F;
-	background-size: 100%;
+	background-size: 120%;
 	width: 900px;
 	height: 900px;
 	top: -450px;
