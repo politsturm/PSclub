@@ -17,6 +17,12 @@
 	margin-bottom: 1.45rem;
 }
 
+@media screen and (max-width:1440px) {
+	.wrapper {
+		margin-top: 0;
+	}
+}
+
 @media screen and (max-width:950px) {
 	.sectionText {
 		font-size: 16px;

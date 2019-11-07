@@ -57,6 +57,15 @@
 	color: white;
 }
 
+@media screen and (max-width:1920px) {
+	.headerImage:before {
+		width: 1300px;
+		height: 1300px;
+		top: -700px;
+		left: 50%;
+	}
+}
+
 @media screen and (max-width:950px) {
 	.wrapper {
 		margin-bottom: 50px;
