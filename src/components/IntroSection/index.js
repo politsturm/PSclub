@@ -9,13 +9,17 @@ const {wrapper, sectionText} = styleHelpers;
 const {introWrapper} = styles;
 
 const IntroSection = () => (
-  <div className={wrapper}>
-    <div className={introWrapper}>
-      <h1>Что такое марксистские клубы ПШ?</h1>
-      <div className={sectionText}>Марксистские клубы читателей информресурса “Politsturm” - это независимое международное коммунистическое объединение граждан, занимающихся изучением научной теории марксизма-ленинизма и практики её применения.</div>
-      <Button style={{marginTop: "30px"}}>Вступить</Button>
-    </div>
-  </div>
+	<div className={wrapper}>
+		<div className={introWrapper}>
+		<h1>Что такое марксистские клубы ПШ?</h1>
+		<div className={sectionText}>Марксистские клубы читателей информресурса “Politsturm” - это независимое международное коммунистическое объединение граждан, занимающихся изучением научной теории марксизма-ленинизма и практики её применения.</div>
+		<a href="#join">
+			<Button style={{marginTop: "30px"}}>
+				Вступить
+			</Button>
+		</a>
+		</div>
+	</div>
 )
 
 IntroSection.propTypes = {

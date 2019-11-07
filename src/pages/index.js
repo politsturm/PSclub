@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import {useStaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -74,7 +74,6 @@ const IndexPage = () => {
 			<MapSection />
 			<JoinSection />
 			<ContactSection />
-			{/*<Link to="/page-2/">Go to page 2</Link>*/}
 		</Layout>
 	)
 }

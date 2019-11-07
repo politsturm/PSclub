@@ -72,7 +72,7 @@ class JoinSection extends Component {
 		} = this.state;
 
 		return (
-			<div className={sectionClasses}>
+			<div className={sectionClasses} id="join">
 				<h2>Вступить</h2>
 				<div style={{width: '100%'}}>
 					<form className={formStyles} onSubmit={this.onSubmit}>
