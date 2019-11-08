@@ -11,3 +11,17 @@ script:
   - "gatsby build"
 after_success:
   - "build completed successfully"
+
+before_deploy:
+  - echo "$SERVER_KNOWN_HOST" >> $HOME/.ssh/known_hosts
+  - openssl aes-256-cbc -K $encrypted_98cfb2fe6fa3_key -iv $encrypted_98cfb2fe6fa3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after -e "$REMOTE_SHELL" --quiet $TRAVIS_BUILD_DIR/public/. "$DEPLOY_SERVER"
+  on:
+    branch: master
