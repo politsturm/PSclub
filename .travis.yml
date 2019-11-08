@@ -13,7 +13,6 @@ after_success:
   - "build completed successfully"
 
 before_deploy:
-  - echo "$SERVER_KNOWN_HOST"
   - echo "$SERVER_KNOWN_HOST" >> $HOME/.ssh/known_hosts
   - openssl aes-256-cbc -K $encrypted_98cfb2fe6fa3_key -iv $encrypted_98cfb2fe6fa3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
   - eval "$(ssh-agent -s)"
