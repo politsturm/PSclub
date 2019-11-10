@@ -46,7 +46,7 @@ class ProgrammSection extends Component {
 				<h2>Карта</h2>
 				<div style={{width: '100%'}}>
 					<Map
-						defaultState={{ center: [55.79, 49.10], zoom: 5 }}
+						defaultState={{ center: [55.44, 65.34], zoom: 4 }}
 						className={mapStyles}
 					>
 					{placemarks.map(({geometry, title, link}) => {
