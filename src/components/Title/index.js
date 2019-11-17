@@ -11,7 +11,7 @@ const {
 } = css;
 
 const Title = ({children}) => (
-	<div className={wrapper} style={{marginBottom: "100px"}}>
+	<div className={wrapper} style={{marginBottom: "100px", marginTop: "150px"}}>
 		<div className={typography}>
 			{children}
 		</div>
