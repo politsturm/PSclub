@@ -28,7 +28,8 @@ class ProgrammSection extends Component {
 				{title: "МК в Челябинске", link: "https://vk.com/ps_cheliabinsk", geometry: [55.159897, 61.402554]},
 				{title: "МК в Ярославле", link: "https://vk.com/politsturm_yaroslavl", geometry: [57.626578, 39.893858]},
 				{title: "МК в Перми", link: "https://vk.com/politsturm_perm", geometry: [58.010450, 56.229434]},
-				{title: "МК в Кургане", link: "https://vk.com/ps_kurgan", geometry: [55.441004, 65.341118]}
+				{title: "МК в Кургане", link: "https://vk.com/ps_kurgan", geometry: [55.441004, 65.341118]},
+				{title: "МК в Чите", link: "https://vk.com/marxist_club_chita", geometry: [52.033635, 113.501049]}
 			]
 		};
 	}
