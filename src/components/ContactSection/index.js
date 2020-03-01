@@ -23,10 +23,10 @@ const ContactSection = ({center, zoom}) => {
 					<ul>
 						<li className={menuItem}><Link to="/about/">О нас</Link></li>
 						{/*<li className={menuItem}><Link to="/course/">Курс обучения</Link></li>*/}
-						<li className={menuItem}><a href="#">Литература</a></li>
+						{/*<li className={menuItem}><a href="#">Литература</a></li>*/}
 					</ul>
 					<ul>
-						<li className={menuItem}><a href="#">FAQ</a></li>
+						{/*<li className={menuItem}><a href="#">FAQ</a></li>*/}
 						<li className={menuItem}><a href="/#map">Карта клубов</a></li>
 						<li className={menuItem}><a href="https://politsturm.com/">Politsturm</a></li>
 					</ul>
