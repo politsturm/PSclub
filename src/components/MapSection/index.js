@@ -23,7 +23,7 @@ class ProgrammSection extends Component {
 				{title: "МК в Москве", link: "https://vk.com/politsturm_moscow", geometry: [55.755814, 37.617635]},
 				{title: "МК в Нижнем Тагиле", link: "https://vk.com/ps_ntagil", geometry: [57.907605, 59.972211]},
 				{title: "МК в Рязани", link: "https://vk.com/politsturm_ryazan", geometry: [54.629216, 39.736375]},
-				{title: "МК в Рыбинске", link: "https://vk.com/politsturm_rubinsk", geometry: [58.048454, 38.858406]},
+				{title: "МК в Ярославской области", link: "https://vk.com/politsturm_yaroslavia", geometry: [57.817361, 39.105138]},
 				{title: "МК в Абакане", link: "https://vk.com/ps_abakan", geometry: [53.721152, 91.442387]},
 				{title: "МК в Челябинске", link: "https://vk.com/ps_cheliabinsk", geometry: [55.159897, 61.402554]},
 				{title: "МК в Перми", link: "https://vk.com/politsturm_perm", geometry: [58.010450, 56.229434]},
